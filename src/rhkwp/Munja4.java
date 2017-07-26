@@ -29,21 +29,20 @@ public class Munja4 {
 		}
 		return thenumberofStrike;
 	}
+
 	static int ball(int[] input, int[] robot) {
-	int ball= 0; 
-		for (int i = 0; i< input.length; i++  )
-			{for (int k =0 ; k< robot.length;k++)
-			{
-				int inputs = input[i];
+		int ball = 0;
+		for (int q = 0; q < input.length; q++) {
+			for (int k = 0; k < robot.length; k++) {
+				int inputs = input[q];
 				int robots = robot[k];
-				if(inputs == robots && i!=k) {
+				if (inputs == robots && q != k) {
 					ball++;
 				}
 			}
 		}
 		return ball;
 	}
-
 
 	public static void main(String[] args) {
 		Scanner scanner = new Scanner(System.in);
@@ -65,7 +64,7 @@ public class Munja4 {
 			int ThenumberofStrike = strike(RandomInt, perfect);
 			int ThenumberofBall = ball(RandomInt, perfect);
 			System.out.println("스트라이크: " + ThenumberofStrike + " 볼: " + ThenumberofBall);
-			
+
 			if (ThenumberofStrike == 3) {
 				System.out.println("수고하셨습니다");
 				break;
